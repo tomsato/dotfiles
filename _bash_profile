@@ -1,0 +1,9 @@
+PS1="\[\033[0;32m\][@\W 7]\$ \[\033[0m\]"
+
+alias ll='ls -l'
+alias ssh='ssh -o StrictHostKeyChecking=no'
+alias grep='grep --color=auto'
+alias wcdiff='git diff --word-diff=color'
+alias wrdiff='git diff --word-diff-regex="\w+"'
+alias wdiff="git diff --color-words --word-diff-regex='\\w+|[^[:space:]]'
+
