@@ -3,22 +3,3 @@ PS1="\[\033[0;32m\][@\W]\$ \[\033[0m\]"
 alias ll='ls -l'
 alias ssh='ssh -o StrictHostKeyChecking=no'
 alias grep='grep --color=auto'
-
-" vim-plugによるplugin管理
-" 使い方
-" :PlugInstall
-" :PlugStatus
-call plug#begin('~/.vim/plugged')
-    " color schema
-    Plug 'ciaranm/inkpot'
-    " 行末のスペースを色付けする
-    Plug 'bronson/vim-trailing-whitespace'
-    " html閉じタグを自動挿入する
-    Plug 'alvan/vim-closetag'
-call plug#end()
-
-"" 以下pluginの設定
-" ■ colorschemeの設定
-if filereadable(expand("~/.vim/plugged/inkpot/colors/inkpot.vim"))
-      colorscheme inkpot
-endif
