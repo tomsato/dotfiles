@@ -29,3 +29,32 @@ syntax on
 " コメントをわかりやすくダークグリーンにする
 hi Comment ctermfg=DarkGreen
 
+" Vimを開いた時にvim-plugを用意する
+if has('vim_starting')
+  set rtp+=~/.vim/autoload
+  if !isdirectory(expand('~/.vim/autoload'))
+    echo 'install vim-plug...'
+    call system('mkdir -p ~/.vim/autoload/')
+    call system('mkdir -p ~/.vim/plugged')
+    call system('curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim')
+  end
+endif
+
+" vim-plugによるplugin管理
+" 使い方
+" :PlugInstall
+" :PlugStatus
+call plug#begin('~/.vim/plugged')
+    " color schema
+    Plug 'ciaranm/inkpot'
+    " 行末のスペースを色付けする
+    Plug 'bronson/vim-trailing-whitespace'
+    " html閉じタグを自動挿入する
+    Plug 'alvan/vim-closetag'
+call plug#end()
+ 
+"" 以下pluginの設定
+" ■ colorschemeの設定
+if filereadable(expand("~/.vim/plugged/inkpot/colors/inkpot.vim"))
+      colorscheme inkpot
+endif
