@@ -41,27 +41,27 @@ if has('vim_starting')
 endif
 
 if 1
-	" vim-plugによるplugin管理
-	" " 使い方
-	" " :PlugInstall
-	" " :PlugStatus
-	call plug#begin('~/.vim/plugged')
-	    " vimでreactの環境を整える
-	    Plug 'pangloss/vim-javascript'
-	    Plug 'mxw/vim-jsx'
-	    " color schema
-	    Plug 'ciaranm/inkpot'
-	    " 行末のスペースを色付けする
-	    Plug 'bronson/vim-trailing-whitespace'
-	    " 入力補完機能を提供してくれる
-	    Plug 'Shougo/neocomplcache'
-	    " html閉じタグ
-	    Plug 'alvan/vim-closetag'
-		Plug 'vim-scripts/gtags.vim'
-	call plug#end()
+  " vim-plugによるplugin管理
+  " " 使い方
+  " " :PlugInstall
+  " " :PlugStatus
+  call plug#begin('~/.vim/plugged')
+    " vimでreactの環境を整える
+    Plug 'pangloss/vim-javascript'
+    Plug 'mxw/vim-jsx'
+    " color schema
+    Plug 'ciaranm/inkpot'
+    " 行末のスペースを色付けする
+    Plug 'bronson/vim-trailing-whitespace'
+    " 入力補完機能を提供してくれる
+    Plug 'Shougo/neocomplcache'
+    " html閉じタグ
+    Plug 'alvan/vim-closetag'
+    Plug 'vim-scripts/gtags.vim'
+  call plug#end()
 
-	"" ■ colorschemeの設定
-	if filereadable( $HOME . "/.vim/plugged/inkpot/colors/inkpot.vim")
-	    colorscheme inkpot
-	endif
+  "" ■ colorschemeの設定
+  if filereadable( $HOME . "/.vim/plugged/inkpot/colors/inkpot.vim")
+    colorscheme inkpot
+  endif
 endif
