@@ -22,12 +22,12 @@ set smartindent
 set tabstop=4
 " カーソルを行頭、行末で止まらないようにする
 set whichwrap=b,s,h,l,<,>,[,]
-" pasteする時に自動で改行を入れない
-autocmd InsertEnter * set paste
 " 構文毎に色をつける
 syntax on
 " コメントをわかりやすくダークグリーンにする
 hi Comment ctermfg=DarkGreen
+" insertモードの時に「jj」をESCにする
+inoremap <silent> jj <ESC>
 
 " Vimを開いた時にvim-plugを用意する
 if has('vim_starting')
