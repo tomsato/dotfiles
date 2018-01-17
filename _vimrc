@@ -58,6 +58,8 @@ if 1
     " html閉じタグ
     Plug 'alvan/vim-closetag'
     Plug 'vim-scripts/gtags.vim'
+    " editorconfig
+    Plug 'editorconfig/editorconfig-vim'
   call plug#end()
 
   "" ■ colorschemeの設定
