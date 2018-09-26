@@ -28,6 +28,9 @@ syntax on
 hi Comment ctermfg=DarkGreen
 " insertモードの時に「jj」をESCにする
 inoremap <silent> jj <ESC>
+" タブ「__」と表示して、行末に続くスペースがあれば「_」とわかりやすく表示する
+set list
+set listchars=tab:__,trail:_
 
 " Vimを開いた時にvim-plugを用意する
 if has('vim_starting')
